@@ -97,12 +97,8 @@ GitHub+Jenkins
 
 
 
-
-
 ## 亮点详解
-Skywalking
-
-### 服务器探针
+### Skywalking链路追踪
 
 
 
@@ -113,7 +109,7 @@ Skywalking
 ### 通过工厂模式拼装响应消息
 
 
-服务网格有可能成为下一代微服务的标准
+
 
 
 ## 具体需求及处理
@@ -147,6 +143,8 @@ applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 
 
 
+---
+
 ### 未完待续···
 
 
@@ -154,11 +152,18 @@ applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 
 
 
-特别感谢
+特别感谢**Lusifer**提供的技术帮助 
 
 
+docker run -d --name nacos -e MODE=standalone -p 8848:8848 0c89467ccc97
 
 
+docker run -e ES_JAVA_OPTS="-Xms256m -Xmx256m" -d -p 9200:9200 -p 9300:9300 --name ES00 da04e3d646ea
+
+
+-javaagent:/Users/yangbo/lib/code/java/myshop/myshop-external-skywalking/agent/skywalking-agent.jar
+-Dskywalking.agent.service_name=myshop-service-reg
+-Dskywalking.collector.backend_service=42.157.128.41:11800
 
 
 
