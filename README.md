@@ -100,7 +100,7 @@ GitHub+Jenkins
 ## 亮点详解
 ### Skywalking链路追踪
 
-
+及时配图
 
 ### Maven Assembly
 目的是提供工程依赖元素、模块、网站文档等其他文件存放到单个归档文件里。
