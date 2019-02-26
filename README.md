@@ -101,7 +101,29 @@ GitHub+Jenkins
 ### Skywalking链路追踪
 这一块真的是有天坑，祝给位好运吧
 
-及时配图
+首先，skywalking因为宿主机的ip问题，始终无法通过docker镜像启动（也可能是我的问题）
+
+通过官网下载sk文件，修改application.yml的h2及elasticsearch信息，直接启动。
+
+1. 启动nacos
+![启动nacos](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/%E5%90%AF%E5%8A%A8nacos.png?raw=true)
+2. 启动elasticsearch
+![启动es](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/%E5%90%AF%E5%8A%A8es.png?raw=true)
+3. 启动skywalking
+![启动sk](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/%E5%90%AF%E5%8A%A8skywalking.png?raw=true)
+4. 启动本地服务，发送请求
+![启动服务]()
+5. nacos服务注册成功
+![nacos成功](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/nacos%E6%B3%A8%E5%86%8C%E6%9C%8D%E5%8A%A1.png?raw=true)
+6. skywalking监测服务详情
+![sk成功](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E7%9B%91%E6%B5%8B%E6%9C%8D%E5%8A%A1.png?raw=true)
+7. skywalking详情
+![1](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E5%85%B3%E7%B3%BB%E5%9B%BE.png?raw=true)
+![2](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E7%AB%AF%E7%82%B9%E5%9B%BE.png?raw=true)
+![3](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E8%AF%A6%E6%83%85.png?raw=true)
+
+
+
 
 ### Maven Assembly
 目的是提供工程依赖元素、模块、网站文档等其他文件存放到单个归档文件里。
