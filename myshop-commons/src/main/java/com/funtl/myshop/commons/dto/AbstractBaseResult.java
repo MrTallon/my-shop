@@ -11,6 +11,7 @@ import java.io.Serializable;
  * @author YangBo
  * @date 2019/02/22
  */
+@Data
 public abstract class AbstractBaseResult implements Serializable {
     @Data
     @JsonInclude(JsonInclude.Include.NON_NULL)

@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * 请求成功返回的数据
+ * 请求失败返回的数据
  *
  * @author YangBo
  * @date 2019/02/22
@@ -21,6 +21,5 @@ public class ErrorResult extends AbstractBaseResult {
     private int code;
     private String title;
     private String detail;
-
 
 }
