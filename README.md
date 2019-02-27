@@ -99,7 +99,7 @@ GitHub+Jenkins
 
 ## 亮点详解
 ### Skywalking链路追踪
-这一块真的是有天坑，祝给位好运吧
+这一块真的是有天坑，祝各位好运吧
 
 首先，skywalking因为宿主机的ip问题，始终无法通过docker镜像启动（也可能是我的问题）
 
