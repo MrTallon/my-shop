@@ -30,8 +30,6 @@ public abstract class AbstractBaseResult implements Serializable {
         private T attributes;
         private T relationships;
         private Links links;
-
-
     }
 
 }
