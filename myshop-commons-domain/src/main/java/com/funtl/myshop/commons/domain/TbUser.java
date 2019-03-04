@@ -2,11 +2,15 @@ package com.funtl.myshop.commons.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.funtl.myshop.commons.dto.AbstractBaseDomain;
+import com.funtl.myshop.commons.utils.RegexpUtils;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 @Table(name = "tb_user")
@@ -19,6 +23,8 @@ public class TbUser extends AbstractBaseDomain {
     /**
      * 用户名
      */
+    @NotNull(message = "用户名不可为空")
+    @Length(min = 3,message = "用户名必须介于3 和 20 之间")
     private String username;
 
     /**
@@ -34,6 +40,8 @@ public class TbUser extends AbstractBaseDomain {
     /**
      * 注册邮箱
      */
+    @NotNull(message = "邮箱不可为空")
+    @Pattern(regexp = RegexpUtils.EMAIL,message = "邮箱格式不正确")
     private String email;
 
     private Date created;

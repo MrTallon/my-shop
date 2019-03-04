@@ -48,11 +48,11 @@ public class TestController {
     public AbstractBaseResult getList(HttpServletRequest request) {
         // 模拟一条TBUser数据
         TbUser tbUser1 = new TbUser();
-        tbUser1.setId(2L);
+        tbUser1.setId(1L);
         tbUser1.setUsername("Eric");
         // 模拟一条TBUser数据
         TbUser tbUser2 = new TbUser();
-        tbUser2.setId(3L);
+        tbUser2.setId(2L);
         tbUser2.setUsername("Sam");
 
         List<TbUser> list = Lists.newArrayList();

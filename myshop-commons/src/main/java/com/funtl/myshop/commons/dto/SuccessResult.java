@@ -44,7 +44,7 @@ public class SuccessResult<T extends AbstractBaseDomain> extends AbstractBaseRes
         dataBean.setId(attributes.getId());
         dataBean.setType(attributes.getClass().getSimpleName());
         dataBean.setAttributes(attributes);
-        if (StringUtils.isEmpty(self)) {
+        if (StringUtils.isNotBlank(self)) {
             Links links = new Links();
             links.setSelf(self + "/" + attributes.getId());
             dataBean.setLinks(links);

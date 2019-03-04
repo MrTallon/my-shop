@@ -3,8 +3,7 @@ package com.funtl.myshop.service.reg.controller;
 import com.funtl.myshop.commons.domain.TbUser;
 import com.funtl.myshop.commons.mapper.TbUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +16,13 @@ public class RegController {
 
     /**
      * 根据 ID 测试查询用户信息
-     * @param id
+     *
+     * @param tbUser
      * @return
      */
-    @GetMapping(value = {"{id}"})
-    public String reg(@PathVariable long id) {
-        TbUser tbUser = tbUserMapper.selectByPrimaryKey(id);
+    @PostMapping(value = "")
+    public String reg(TbUser tbUser) {
+        // TODO 学习一下Validation
         return tbUser.getUsername();
     }
 }
