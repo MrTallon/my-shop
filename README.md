@@ -134,6 +134,11 @@ GitHub+Jenkins
 经过多次双十一洗礼，稳定可靠。
 
 
+### Swagger2 接口文档
+在线测试接口，并且极大的简化了接口文档的编写。
+![sw](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/swagger.jpg?raw=true)
+
+
 
 
 
