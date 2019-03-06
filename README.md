@@ -1,27 +1,25 @@
-# Spring Cloud Alibaba
-
-## 项目介绍
+## 1. 项目介绍
 
 
 
-### 开发环境
+### 1.1 开发环境
 
 - 操作系统：macOS Mojave 10.14.2
 - 开发工具：Intellig IDEA
 - 数据库：MySQL 8.0.13
 - Java SDK : Oracle JDK 1.8.152
 
-### 部署环境
+### 1.2 部署环境
 
 - 操作系统：Linux CentOS7.4-64bit
 
-### 项目管理工具
+### 1.3 项目管理工具
 
 - 项目构建：Maven + Nexus
 - 代码管理：Git + GitHub
 - 镜像管理：Docker Registry
 
-### 后台主要技术栈
+### 1.4 后台主要技术栈
 
 - 核心框架：Spring Boot + Spring Cloud Alibaba
 - ORM框架：Mybatis-Plus
@@ -39,23 +37,23 @@
 
 ---
 
-### 前后台分离
+### 1.5 前后台分离
 
 前端框架：NodeJS + VUE + Axios
 
 ---
 
-### 持续集成
+### 1.6 持续集成
 
 GitHub+Jenkins
 
 ---
 
-### 拓扑结构
+### 1.7 拓扑结构
 
 ![拓扑结构](https://github.com/MrTallon/Mind-Palace/blob/master/img/%E6%8B%93%E6%89%91.png?raw=true)
 
-### Service
+### 1.8 Service
 
 | 服务名称                                 | 服务端口 | 服务说明       |
 | ---------------------------------------- | -------- | -------------- |
@@ -97,8 +95,8 @@ GitHub+Jenkins
 
 
 
-## 亮点详解
-### Skywalking链路追踪
+## 2. 亮点详解
+### 2.1 Skywalking链路追踪
 这一块真的是有天坑，祝各位好运吧
 
 首先，skywalking因为宿主机的ip问题，始终无法通过docker镜像启动（也可能是我的问题）
@@ -117,24 +115,18 @@ GitHub+Jenkins
 ![nacos成功](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/nacos%E6%B3%A8%E5%86%8C%E6%9C%8D%E5%8A%A1.png?raw=true)
 6. skywalking监测服务详情
 ![sk成功](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E7%9B%91%E6%B5%8B%E6%9C%8D%E5%8A%A1.png?raw=true)
-![1](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E5%85%B3%E7%B3%BB%E5%9B%BE.png?raw=true)
-![2](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E7%AB%AF%E7%82%B9%E5%9B%BE.png?raw=true)
-![3](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/sk%E8%AF%A6%E6%83%85.png?raw=true)
 
-
-
-
-### Maven Assembly
+### 2.2 Maven Assembly
 目的是提供工程依赖元素、模块、网站文档等其他文件存放到单个归档文件里,方便后期维护。
 ![as](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/as%E6%8F%92%E4%BB%B6.png?raw=true)
 
-### RocketMQ
+### 2.3 RocketMQ
 高性能，高可用，高并发。
 
 经过多次双十一洗礼，稳定可靠。
 
 
-### Swagger2 接口文档
+### 2.4 Swagger2 接口文档
 在线测试接口，并且极大的简化了接口文档的编写。
 ![sw](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/swagger.jpg?raw=true)
 
@@ -142,31 +134,27 @@ GitHub+Jenkins
 
 
 
-## 具体需求及处理
+## 3. 具体需求及处理
 
-### json字符串不显示为null的标签
+### 3.1 json字符串不显示为null的标签
+
 ```
 @JsonInclude(JsonInclude.Include.NON_NULL)
 ```
 
+### 3.2 用日志级别控制显示信息
 
-### 开发环境的报错信息有详情，生产环境不暴露错误详情
-用日志级别控制显示详情
-```
+开发环境的报错信息有详情，生产环境不暴露错误详情(应该屏蔽敏感信息，detail字段最好在生产环境不可见)
+```yaml
+#动态读取配置文件中的日志级别
 applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 ```
-动态读取配置文件中的日志级别
-> 生产环境应该屏蔽敏感信息，detail字段最好在生产环境不可见
 
-
-## 使用到的设计模式
+## 4. 使用到的设计模式
 
 ### 简单工厂模式
-整理响应数据的输出
 
 ### 单例模式
-保证唯一的工厂
-
 
 ### 外观模式
 
