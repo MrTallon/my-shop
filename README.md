@@ -120,9 +120,11 @@ GitHub+Jenkins
 目的是提供工程依赖元素、模块、网站文档等其他文件存放到单个归档文件里,方便后期维护。
 ![as](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/as%E6%8F%92%E4%BB%B6.png?raw=true)
 
-### 2.3 RocketMQ
-高性能，高可用，高并发。
+### 2.3 邮件任务
+Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 
+#### 2.3.1 RocketMQ
+高性能，高可用，高并发。
 经过多次双十一洗礼，稳定可靠。
 
 
