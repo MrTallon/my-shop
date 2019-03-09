@@ -24,6 +24,7 @@ public class RegService {
         try {
             output.send(MessageBuilder.withPayload(MapperUtils.obj2json(tbUser)).build());
         } catch (Exception e) {
+            System.out.println("失败啦····");
             e.printStackTrace();
         }
 

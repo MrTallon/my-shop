@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 将对象转换为字符串
+ * Jackson 工具类 : 将对象转换为字符串
  *
  * @author YangBo
  * @date 2019/03/09

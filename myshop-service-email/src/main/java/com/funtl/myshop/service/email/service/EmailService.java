@@ -33,23 +33,21 @@ public class EmailService {
     @Autowired
     private TemplateEngine templateEngine;
 
-    @StreamListener
+    @StreamListener("input")
     public void receive(String json) {
         try {
             // 发送普通邮件
             TbUser tbUser = MapperUtils.json2pojo(json, TbUser.class);
-            sendEmail("欢迎注册", "欢迎 " + tbUser.getUsername() + " 注册成功！", tbUser.getEmail());
+            sendEmail("欢迎注册", "欢迎 " + tbUser.getUsername() + " 加入广州千锋大家庭！", tbUser.getEmail());
 
             // 发送 HTML 模板邮件
             Context context = new Context();
             context.setVariable("username", tbUser.getUsername());
             String emailTemplate = templateEngine.process("reg", context);
             sendTemplateEmail("欢迎注册", emailTemplate, tbUser.getEmail());
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     /**
