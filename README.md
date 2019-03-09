@@ -60,11 +60,14 @@ GitHub+Jenkins
 | **以下为通用服务**                       |          |                |
 | myshop-service-gateway                   | 9000     | 服务网关       |
 | myshop-service-reg                       | 9501     | 用户注册       |
+| myshop-service-email                     | 9876     | 邮箱任务       |
+| myshop-external-skywalking               | 8080     | 链路追踪       |
 | myshop-service-sso                       | 9502     | 单点登录       |
 | myshop-service-cache                     | 9503     | 缓存服务       |
 | myshop-service-oss                       | 9504     | 文件上传       |
 | myshop-service-forget                    | 9505     | 忘记密码       |
 | myshop-service-search                    | 9506     | 全文检索       |
+| myshop-service-datetime                  |          | 全局时钟       |
 | **以下为服务提供者**                     |          |                |
 | myshop-service-provider-content-category | 10101    | 内容分类提供者 |
 | myshop-service-provider-content          | 10102    | 内容服务提供者 |
@@ -127,6 +130,7 @@ Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 高性能，高可用，高并发。
 经过多次双十一洗礼，稳定可靠。
 
+> MQ在生产过程中报超时
 
 ### 2.4 Swagger2 接口文档
 在线测试接口，并且极大的简化了接口文档的编写。
