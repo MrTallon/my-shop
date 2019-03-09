@@ -1,5 +1,6 @@
 package com.funtl.myshop.commons.dto;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -19,8 +20,10 @@ public class BaseResultFactory<T extends AbstractBaseDomain> {
 
     }
 
+    private static HttpServletResponse response;
+
     // 单例模式保证静态的全局唯一工厂
-    public static BaseResultFactory getInstance() {
+    public static BaseResultFactory getInstance(HttpServletResponse response) {
         if (baseResultFactory == null) {
             synchronized (BaseResultFactory.class) {
                 if (baseResultFactory == null) {
@@ -28,6 +31,8 @@ public class BaseResultFactory<T extends AbstractBaseDomain> {
                 }
             }
         }
+        BaseResultFactory.response = response;
+        baseResultFactory.initResponse();
         return baseResultFactory;
     }
 
@@ -62,12 +67,19 @@ public class BaseResultFactory<T extends AbstractBaseDomain> {
      * @param level  日志级别 （为debug时显示错误详情）
      * @return
      */
-    public static AbstractBaseResult build(int code, String title, String detail, String level) {
+    public AbstractBaseResult build(int code, String title, String detail, String level) {
+        //设置请求失败的响应码
+        response.setStatus(code);
+
         if (LOGGER_LEVEL_DEBUG.equals(level)) {
             return new ErrorResult(code, title, detail);
         } else {
             return new ErrorResult(code, title, null);
         }
+    }
+
+    private void initResponse() {
+        response.setHeader("Content-Type","application/vnd.api+json");
     }
 
 }
