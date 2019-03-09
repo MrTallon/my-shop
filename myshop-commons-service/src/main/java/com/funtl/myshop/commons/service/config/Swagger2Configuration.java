@@ -24,8 +24,8 @@ public class Swagger2Configuration {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("MyShop API 文档")
-                .description("MyShop API 网关接口，http://www.funtl.com")
-                .termsOfServiceUrl("http://www.funtl.com")
+                .description("MyShop API 网关接口，http://localhost:9501/swagger-ui.html")
+                .termsOfServiceUrl("https://mrtallon.github.io/MyShop/")
                 .version("1.0.0")
                 .build();
     }
