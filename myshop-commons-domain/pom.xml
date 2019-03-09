@@ -29,10 +29,7 @@
             <artifactId>spring-context</artifactId>
         </dependency>
         <!-- Commons Begin -->
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-        </dependency>
+
         <!-- Commons End -->
 
         <!-- Projects Begin -->
