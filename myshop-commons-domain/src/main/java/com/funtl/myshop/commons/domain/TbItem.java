@@ -1,16 +1,14 @@
 package com.funtl.myshop.commons.domain;
 
-import javax.persistence.*;
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.funtl.myshop.commons.dto.AbstractBaseDomain;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
 
 @Table(name = "tb_item")
-public class TbItem {
-    /**
-     * 商品id，同时也是商品编号
-     */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class TbItem extends AbstractBaseDomain {
 
     /**
      * 商品标题
@@ -52,34 +50,6 @@ public class TbItem {
      * 商品状态，1-正常，2-下架，3-删除
      */
     private Byte status;
-
-    /**
-     * 创建时间
-     */
-    private Date created;
-
-    /**
-     * 更新时间
-     */
-    private Date updated;
-
-    /**
-     * 获取商品id，同时也是商品编号
-     *
-     * @return id - 商品id，同时也是商品编号
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * 设置商品id，同时也是商品编号
-     *
-     * @param id 商品id，同时也是商品编号
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * 获取商品标题
@@ -225,39 +195,4 @@ public class TbItem {
         this.status = status;
     }
 
-    /**
-     * 获取创建时间
-     *
-     * @return created - 创建时间
-     */
-    public Date getCreated() {
-        return created;
-    }
-
-    /**
-     * 设置创建时间
-     *
-     * @param created 创建时间
-     */
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    /**
-     * 获取更新时间
-     *
-     * @return updated - 更新时间
-     */
-    public Date getUpdated() {
-        return updated;
-    }
-
-    /**
-     * 设置更新时间
-     *
-     * @param updated 更新时间
-     */
-    public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
 }
