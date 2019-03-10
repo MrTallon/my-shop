@@ -32,7 +32,7 @@ public class RegController extends AbstractBaseController<TbUser> {
      * @return
      */
     @ApiOperation(value = "用户注册",notes = "注意用户名和邮箱不可重复")
-    @PostMapping(value = "")
+    @PostMapping(value = "user")
     public AbstractBaseResult reg(@ApiParam(name = "tbUser",value = "用户模型") TbUser tbUser) {
         //数据校验
         String message = BeanValidator.validator(tbUser);
