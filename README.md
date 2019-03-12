@@ -4,7 +4,7 @@
 
 ### 1.1 开发环境
 
-- 操作系统：macOS Mojave 10.14.2
+- 操作系统：macOS 10.14.2
 - 开发工具：Intellig IDEA
 - 数据库：MySQL 8.0.13
 - Java SDK : Oracle JDK 1.8.152
@@ -130,7 +130,6 @@ Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 高性能，高可用，高并发。
 经过多次双十一洗礼，稳定可靠。
 
-> MQ在生产过程中报超时
 
 ### 2.4 Swagger2 接口文档
 在线测试接口，并且极大的简化了接口文档的编写。
