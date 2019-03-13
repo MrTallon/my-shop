@@ -155,6 +155,12 @@ Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 ```
 
+### 3.3 跨域
+
+使用Spring Cloud服务网关，基于reactive解决跨域问题
+所有服务都在API网关聚合，所以其他模块不需要再做跨域处理
+
+
 ## 4. 使用到的设计模式
 
 ### 简单工厂模式
