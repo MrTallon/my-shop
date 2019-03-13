@@ -127,6 +127,7 @@ GitHub+Jenkins
 Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 
 #### 2.3.1 RocketMQ
+![mq](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/rocketmq.jpg?raw=true)
 高性能，高可用，高并发。
 经过多次双十一洗礼，稳定可靠。
 
