@@ -8,6 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -23,7 +24,9 @@ public abstract class AbstractBaseController<T extends AbstractBaseDomain> {
 
     private static final String LOGGING_LEVEL_MY_SHOP = "logging.level.com.myshop";
 
+    @Resource
     protected HttpServletRequest request;
+    @Resource
     protected HttpServletResponse response;
 
     @Autowired
