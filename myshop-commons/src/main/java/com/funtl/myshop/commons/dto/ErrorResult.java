@@ -21,5 +21,4 @@ public class ErrorResult extends AbstractBaseResult {
     private int code;
     private String title;
     private String detail;
-
 }
