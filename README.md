@@ -162,17 +162,6 @@ applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 所有服务都在API网关聚合，所以其他模块不需要再做跨域处理
 
 
-## 4. 使用到的设计模式
-
-### 简单工厂模式
-
-### 单例模式
-
-### 外观模式
-
-
-
-
 ---
 
 ### 未完待续···
