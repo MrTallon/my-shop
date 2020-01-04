@@ -11,7 +11,7 @@
 
 ### 1.2 部署环境
 
-- 操作系统：Linux CentOS7.4-64bit
+- Docker：Docker-Compose 1.22.0-rc2
 
 ### 1.3 项目管理工具
 
