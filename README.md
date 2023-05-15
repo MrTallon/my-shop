@@ -93,14 +93,13 @@ GitHub+Jenkins
 
 #### 远程服务(42.157.128.41)
 
-
-
-
-
+<br/>
+<br/>
 
 ## 2. 亮点详解
 ### 2.1 Skywalking链路追踪
-这一块真的是有天坑，祝各位好运吧
+
+这一块真的是有天坑，务必谨慎
 
 首先，skywalking因为宿主机的ip问题，始终无法通过docker镜像启动（也可能是我的问题）
 
@@ -136,9 +135,8 @@ Spring Boot + RocketMQ + Thymeleaf 异步消息队列发送模版邮件
 在线测试接口，并且极大的简化了接口文档的编写。
 ![sw](https://github.com/MrTallon/MyShop/blob/master/myshop-commons/images/swagger.jpg?raw=true)
 
-
-
-
+<br/>
+<br/>
 
 ## 3. 具体需求及处理
 
@@ -161,17 +159,14 @@ applicationContext.getEnvironment().getProperty("com.funtl.myshop")
 使用Spring Cloud服务网关，基于reactive解决跨域问题
 所有服务都在API网关聚合，所以其他模块不需要再做跨域处理
 
-
----
+<br/>
+<br/>
 
 ### 未完待续···
 
+---
 
-
-
-
-
-特别感谢**Lusifer**提供的技术帮助 
+特别感谢 **Lusifer** 提供的技术帮助 
 
 
 
